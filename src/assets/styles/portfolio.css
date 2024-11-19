@@ -1,0 +1,122 @@
+/* General styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio {
+    width: 80%; /* 80% width on larger screens */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Max width for large screens */
+}
+
+  /* Header & Navigation Bar */
+header {
+    margin-bottom: 30px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #555;
+    position: relative;
+}
+
+.nav-item:hover::after {
+    content: '→';
+    position: absolute;
+    right: -20px;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.intro {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #61dafb;
+    font-size: 18px;
+}
+
+.profile-image {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+  /* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #ccc;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .portfolio {
+      width: 100%; /* Full width on small screens */
+    }
+
+.navigation {
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro h1 {
+    font-size: 28px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+}

@@ -1,0 +1,64 @@
+/* Fondo del canvas con estrellas */
+.starry-sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #000, #090a0f); /* Gradiente galáctico */
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Estilos para las estrellas */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+    opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Estilos del fondo galáctico */
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Asegura que el canvas se quede detrás del contenido */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 1) 70%, transparent);
+    animation: holeAnimation 10s infinite; /* Añade animación para el agujero negro */
+}
+
+/* Animación para simular el agujero negro */
+@keyframes holeAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+  /* Estilo para el canvas */
+canvas {
+    display: block; /* Asegura que el canvas ocupe todo el espacio disponible */
+    width: 100%;
+    height: 100%;
+}
+

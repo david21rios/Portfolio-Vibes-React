@@ -1,23 +1,35 @@
+/* --- Contenedor raíz --- */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #000;
+  height: calc(100vh - 50px); 
+  border: 5px solid green; 
+  width: 80%;
+  margin-left: 10%;
+  overflow: auto;
 }
 
+/* --- Estilos del logo --- */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* --- Animación del logo --- */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,10 +45,78 @@
   }
 }
 
+/* --- Estilos de las tarjetas --- */
 .card {
   padding: 2em;
 }
 
+/* --- Texto de información adicional --- */
 .read-the-docs {
   color: #888;
+}
+
+/* --- Barra de navegación vertical --- */
+.vertical-nav {
+  position: fixed;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  background-color: #1a1a1a; /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 10px 0 0 10px; /* Bordes redondeados a la izquierda */
+  z-index: 1000;
+}
+
+.nav-item {
+  display: block;
+  color: white;
+  font-family: 'Press Start 2P', cursive; /* Fuente retro/futurista */
+  font-size: 1.2rem;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  background-color: #00ff00; /* Color brillante al pasar el mouse */
+  transform: scale(1.1); /* Efecto de aumento */
+  border-color: #00ff00; /* Resaltar el borde al pasar el mouse */
+}
+
+/* --- Estilos para el contenido principal --- */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Asegura que el contenido se alinee desde la parte superior */
+  max-width: 80%; /* Limitar el ancho del contenido */
+  margin: 0 auto;
+  padding-top: 20px; /* Ajustar el contenido a la parte inferior de la barra */
+}
+
+@media (max-width: 768px) {
+  .App {
+    max-width: 100%; /* En pantallas pequeñas, usar el 100% del ancho */
+  }
+}
+
+/* --- Estilos para la imagen de perfil --- */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* --- Estilos para el fondo galáctico --- */
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Colocar detrás del contenido principal */
 }
