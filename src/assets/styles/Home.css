@@ -1,0 +1,100 @@
+/* --- Contenedor de la página Home --- */
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 60px; /* Para evitar que el contenido quede debajo de la barra */
+}
+
+/* --- Sección izquierda (introducción, recuadro y botón) --- */
+.left-section {
+    flex: 1;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 20%;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.title-home{
+    font-family: 'Press Start 2P', cursive; /* Fuente retro/futurista */
+    
+}
+
+/* --- Sección derecha (nombre, enlaces y logos) --- */
+.right-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 700px;
+}
+
+p {
+    color: #888;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+  /* --- Logos de LinkedIn y GitHub --- */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #0077b5; /* Color LinkedIn */
+}
+
+.social-icon:last-child:hover {
+    color: #333; /* Color GitHub */
+}
+
+  /* --- Recuadro de la introducción --- */
+.intro-box {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px; /* Border radius amplio */
+    margin-bottom: 20px;
+}
+
+.intro-box p {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* --- Estilo del botón "Learn more about me" --- */
+.about-button {
+    background-color: green; /* Fondo color LinkedIn */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.title-button{
+    background-color: green; /* Fondo color LinkedIn */
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;    
+}
+
+.about-button:hover {
+    background-color: #d07a09; /* Fondo oscuro cuando se pasa el mouse */
+}
+

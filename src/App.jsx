@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './assets/styles/App.css'; // Estilos de la aplicación
-import './assets/styles/background.css'; // Estilos del background
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './assets/styles/App.css';
+import './assets/styles/background.css';
 import { generateStars } from './utils/generateStars';
 import ProjectFooter from './components/Footer';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Projects = React.lazy(() => import('./pages/Projects'));
+const Habilidades = React.lazy(() => import('./pages/Habilidades'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 
 function App() {
@@ -29,16 +30,14 @@ function App() {
       }
     };
 
-    // Llamar a la función de ajuste del tamaño al cargar la página
-    adjustCanvasSize();
-    
-    // Inicializar las estrellas
+    adjustCanvasSize();  // Ajustar tamaño inicial
+
+    // Inicializar las estrellas y planetas en el canvas
     generateStars(canvas);
 
-    // Actualizar el tamaño del canvas al redimensionar la ventana
-    window.addEventListener('resize', adjustCanvasSize);
+    window.addEventListener('resize', adjustCanvasSize);  // Actualizar tamaño al redimensionar
     return () => {
-      window.removeEventListener('resize', adjustCanvasSize);
+      window.removeEventListener('resize', adjustCanvasSize);  // Limpiar al desmontar
     };
   }, []);
 
@@ -53,18 +52,21 @@ function App() {
 
           {/* Barra de Navegación Vertical */}
           <div className="vertical-nav">
-            <Link className="nav-item" to="/">Home</Link>
-            <Link className="nav-item" to="/about">About</Link>
-            <Link className="nav-item" to="/projects">Projects</Link>
-            <Link className="nav-item" to="/contact">Contact</Link>
+            <ul>
+              <Link className="nav-item" to="/">Home</Link>
+              <Link className="nav-item" to="/projects">Projects</Link>
+              <Link className="nav-item" to="/contact">Contact</Link>
+              <Link className="nav-item" to="/habilidades">Habilidades</Link>
+            </ul>
           </div>
 
           {/* Rutas de la aplicación */}
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/skills" element={<Habilidades />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
