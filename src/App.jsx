@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Projects = React.lazy(() => import('./pages/Projects'));
-const Habilidades = React.lazy(() => import('./pages/Habilidades'));
+const Habilidades = React.lazy(() => import('./pages/Skills'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 
 function App() {
@@ -55,8 +55,8 @@ function App() {
             <ul>
               <Link className="nav-item" to="/">Home</Link>
               <Link className="nav-item" to="/projects">Projects</Link>
+              <Link className="nav-item" to="/skills">Skills</Link>
               <Link className="nav-item" to="/contact">Contact</Link>
-              <Link className="nav-item" to="/habilidades">Habilidades</Link>
             </ul>
           </div>
 

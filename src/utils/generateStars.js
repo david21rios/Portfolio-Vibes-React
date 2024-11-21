@@ -95,8 +95,8 @@ const generateStars = (canvas) => {
     }
 
     // Crear un planeta y su luna
-    const planet = new Planet(200, 'blue', 0.005);  // Radio y velocidad de rotación
-    const moon = new Moon(planet, 40, 'gray', 0.01); // Distancia y velocidad de la luna
+    const planet = new Planet(200, 'blue', 0.002);  // Radio y velocidad de rotación
+    const moon = new Moon(planet, 40, 'gray', 0.001); // Distancia y velocidad de la luna
 
     const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);

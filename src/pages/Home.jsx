@@ -1,11 +1,24 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Home.css'; // Estilos específicos de la página Home
 // import davidImagen from '../assets/images/DavidRios-perfil/DavidCV.jpg'
 
 
 const Home = () => {
+
+    const [color, setcolor] = useState('white');//Estado inicial del color
+
+    useEffect(() => {
+        const colors = ['#9A00FF', '#00AFFF', '#FFDD00', '#6A00FF'];
+        const interval = setInterval(() => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            setcolor(randomColor);//Cambia a un color aleatorio
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
     <div className="home-container">
 
@@ -16,13 +29,12 @@ const Home = () => {
                     Introduccion
                 </div>
                 <div className="intro-box">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                 <br>
                 </br>
                 <br>
-
                 </br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                 </div>
 
             {/* Botón/link a la página About */}
@@ -39,15 +51,18 @@ const Home = () => {
 
       {/* Sección derecha: nombre, enlaces y logos */}
         <div className="right-section">
-            <h1 className="title-home">David Santiago Ríos Lara</h1>
+            <h1 className="title-home" 
+                style={{color: color}}>
+                David Santiago Ríos Lara
+            </h1>
         
             {/* Logos de LinkedIn y GitHub */}
             <div className="social-links">
             <a href="https://www.linkedin.com/in/davidriosl/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <i className="bi bi-linkedin" style={{ fontSize: '2rem', color: '#0A66C2' }}></i>
+                <i className="bi bi-linkedin" style={{ fontSize: '2rem'}}></i>
             </a>
             <a href="https://github.com/david21rios" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <i className="bi bi-github" style={{ fontSize: '2rem', color: '#181717' }}></i>
+                <i className="bi bi-github" style={{ fontSize: '2rem'}}></i>
             </a>
             </div>
         </div>
