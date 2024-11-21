@@ -114,18 +114,6 @@
   height: calc(100vh - 60px);
 }
 
-h1 {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-p {
-  color: #888;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
 
 @media (max-width: 768px) {
   .App {
@@ -133,26 +121,7 @@ p {
   }
 }
 
-/* --- Estilos para la imagen de perfil --- */
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  border: 3px solid #00ff00;
-}
-
-/* --- Estilos para el fondo galáctico --- */
-.canvas-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-/* --- Contenedor de la sección principal --- */
+/* --- REVISAR Y SI NO SE UTILIZA ELIMINAR Contenedor de la sección principal --- */
 .main-container {
   display: flex; /* Para disposición horizontal */
   justify-content: space-between; /* Distribuye el espacio entre las dos secciones */
@@ -161,52 +130,5 @@ p {
   margin-top: 60px; /* Para evitar que el contenido quede debajo de la barra */
   padding: 20px;
   gap: 40px; /* Espacio entre las dos secciones */
-}
-
-/* --- Sección de la izquierda (nombre y enlaces) --- */
-.left-section {
-  /* display: flex; */
-  flex-direction: column; /* Los elementos estarán en columna */
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 50%; /* Ocupa el 40% del ancho */
-}
-
-.left-section h1 {
-  color: white;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.left-section .nav-item {
-  margin-bottom: 10px; /* Espacio entre los enlaces */
-}
-
-/* --- Sección de la derecha (breve introducción) --- */
-.right-section {
-  display: flex;
-  flex-direction: column; /* Los elementos estarán en columna */
-  justify-content: flex-start;
-  /* align-items: flex-start; */
-  width: 50%; /* Ocupa el 50% del ancho */
-}
-
-.right-section p {
-  color: #888;
-  font-size: 1.2rem;
-  text-align: justify;
-}
-
-/* --- Responsividad: Apilar las secciones en pantallas pequeñas --- */
-@media (max-width: 768px) {
-  .main-container {
-    flex-direction: column; /* Las secciones se apilan verticalmente en pantallas pequeñas */
-    align-items: center;
-  }
-
-  .left-section, .right-section {
-    width: 100%; /* En pantallas pequeñas, ambas secciones ocupan el 100% */
-    margin-bottom: 20px; /* Añadimos espacio entre las secciones */
-  }
 }
 

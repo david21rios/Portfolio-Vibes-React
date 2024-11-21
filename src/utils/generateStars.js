@@ -4,9 +4,9 @@ const generateStars = (canvas) => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const numberOfStars = 100; // Ajusta la cantidad de estrellas
+    const numberOfStars = 200; // Ajusta la cantidad de estrellas
     const stars = [];
-    const blackHoleRadius = 100; // Radio del agujero negro
+    const blackHoleRadius = 60; // Radio del agujero negro
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
 
@@ -43,6 +43,7 @@ const generateStars = (canvas) => {
             }
         }
     }
+
 
     class Planet {
         constructor(radius, color, speed) {
@@ -93,9 +94,9 @@ const generateStars = (canvas) => {
     for (let i = 0; i < numberOfStars; i++) {
         stars.push(new Star());
     }
-
     // Crear un planeta y su luna
     const planet = new Planet(200, 'blue', 0.002);  // Radio y velocidad de rotación
+
     const moon = new Moon(planet, 40, 'gray', 0.001); // Distancia y velocidad de la luna
 
     const animate = () => {
