@@ -1,9 +1,246 @@
-.title-about{
-    color: brown;
+/* About Section AJUSTES EFECTOS */
+
+.about-container {
+    animation: doorOpen 1s ease-out;
 }
 
-p {
-    color: #888;
+@keyframes doorOpen {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+.fact-card h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #fbfdff;
+    margin: 0;
+    animation: numberSpin 1.5s ease-out forwards;
+}
+
+@keyframes numberSpin {
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateX(45deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+
+.certification-list li {
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    width: 50%;
+    animation: modalZoom 0.8s ease-out forwards;
+}
+
+@keyframes modalZoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* About Section Styles */
+
+.about-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Section Titles */
+.title-about {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro/futurista */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #16a799a3;
+    text-align: center;
+}
+
+/* Education Section */
+.education-section,
+.certification-section,
+.facts-section {
+    background: #71252567;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Education List */
+.education-list {
+    list-style: none;
+    padding: 0;
+}
+
+.education-list li {
+    margin: 0.5rem 0;
     font-size: 1.2rem;
-    text-align: justify;
+}
+
+/* Certification Section */
+.certification-list {
+    list-style: none;
+    padding: 0;
+}
+
+.certification-button {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro/futurista */
+    background-color: #2e547a92;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.certification-button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* Modal Styles */
+.certificate-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: modalOpen 0.5s ease-out;
+}
+
+.modal-content {
+    position: relative;
+    width: 50%;
+    animation: explosionOpen 0.8s ease-out;
+}
+
+.certificate-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background: #007BFF;
+    color: #fff;
+}
+
+/* Facts Section */
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.fact-card {
+    background: #2e547a92;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fact-card h2 {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro/futurista */
+    font-size: 1.5rem;
+    color: #fbfdff;
+    margin: 0;
+}
+
+.fact-card p {
+    font-size: 1rem;
+    margin: 10px 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* Animations */
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes explosionOpen {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes closeBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
