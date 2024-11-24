@@ -1,9 +1,32 @@
-
-import { gsap } from 'gsap';
-
+// animacionesAbout.js
 export const animarAbout = () => {
-  // Animaciones que se deben ejecutar solo cuando About se muestra
-    gsap.from('.education-section', { opacity: 2, y: 100, duration: 1, stagger: 0.3 });
-    gsap.from('.certification-section', { opacity: 1, y: 100, duration: 1, stagger: 0.3 });
-    gsap.from('.facts-section', { opacity: 1, y: 100, duration: 1, stagger: 0.3 });
+  const sections = document.querySelectorAll('.education-section, .certification-section, .facts-section');
+
+  const observer = new IntersectionObserver(
+      (entries, observer) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('fade-in');
+                  observer.unobserve(entry.target);
+              }
+          });
+      },
+      { threshold: 0.2 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Animar las listas de educación y certificación
+  const educationItems = document.querySelectorAll('.education-list li');
+  const certificationItems = document.querySelectorAll('.certification-list li');
+
+  educationItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 0.2}s`;
+      item.classList.add('shuffle');
+  });
+
+  certificationItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 0.2}s`;
+      item.classList.add('shuffle');
+  });
 };

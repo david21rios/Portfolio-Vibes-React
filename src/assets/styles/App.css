@@ -109,7 +109,7 @@
   align-items: center;
   justify-content: flex-start;
   margin-top: 60px; /* Para evitar que el contenido quede debajo de la barra */
-  padding: 20px;
+  /* padding: 20px; */
   width: 100%;
   height: calc(100vh - 60px);
 }
