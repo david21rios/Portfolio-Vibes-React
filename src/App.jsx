@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './assets/styles/App.css';
 import './assets/styles/background.css';
 import { generateStars } from './utils/generateStars';
+//
 import './utils/animacionesAbout.js';
 import ProjectFooter from './components/Footer';
 import { Link } from 'react-router-dom';
