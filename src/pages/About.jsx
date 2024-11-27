@@ -11,19 +11,19 @@ const About = () => {
     const [activeCertificate, setActiveCertificate] = useState(null);
 
     const certificates = [
-        { id: 1, name: 'Ingles EFSET', image: '/assets/images/certificate1.jpg' },
+        { id: 1, name: 'Ingles EFSET', image: '../assets//images/Certificado/cert-ing.jpg' },
         { id: 2, name: 'Bacheloor Degree', image: '/assets/images/certificate2.jpg' },
-        { id: 3, name: 'Power BI', image: '/assets/images/certificate3.jpg' },
+        { id: 3, name: 'Power BI', image: '../assets/images/Certificado/' },
     ];
     const certificates2 = [
-        { id: 4, name: 'Conceptos de la programacion', image: '/assets/images/certificate4.jpg' },
-        { id: 5, name: 'Introduccion a la programacion', image: '/assets/images/certificate5.jpg' },
-        { id: 6, name: 'Java Basico', image: '/assets/images/certificate6.jpg' },
+        { id: 4, name: 'Conceptos de la programacion', image: '../assets/images/Certificado/cert1.png' },
+        { id: 5, name: 'Introduccion a la programacion', image: '../assets/images/Certificado/cert2.png' },
+        { id: 6, name: 'Java Basico', image: '../assets/images/Certificado/cert3.png' },
     ];
     const certificates3 = [
-        { id: 7, name: 'HTML y CSS', image: '/assets/images/certificate7.jpg' },
-        { id: 8, name: 'JavaScript', image: '/assets/images/certificate8.jpg' },
-        { id: 9, name: 'ReactJS Basico', image: '/assets/images/certificate9.jpg' },
+        { id: 7, name: 'HTML y CSS', image: '../assets/images/Certificado/cert4.png' },
+        { id: 8, name: 'JavaScript', image: '../assets/images/Certificado/cert5.png' },
+        { id: 9, name: 'ReactJS Basico', image: '../assets/images/Certificado/cert6.png' },
     ];
 
     const stats = [
@@ -46,8 +46,7 @@ const About = () => {
                 <h1 className='title-about'>Education</h1>
                 <ul className='education-list'>
                     <li>Bachelor in Systems Engineering - Fundacion Universitaria San Jose (2020-2024)</li>
-                    <li>Frontend Development Bootcamp - Platzi (2021)</li>
-                    <li>JavaScript and ReactJS Advanced Course - Udemy (2022)</li>
+                    <li>Motorcycle Maintenance Technician (2016 - 2017)</li>
                 </ul>
             </section>
 
