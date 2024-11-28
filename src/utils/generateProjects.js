@@ -1,44 +1,21 @@
-// Utilidad para generar dinámicamente proyectos
+// Función para generar proyectos con posiciones específicas
 const generateProjects = () => {
     const projects = [
-        {
-            id: 1,
-            name: "Project 1",
-            image: "/assets/images/project1.jpg",
-            url: "https://example.com/project1",
-        },
-        {
-            id: 2,
-            name: "Project 2",
-            image: "/assets/images/project2.jpg",
-            url: "https://example.com/project2",
-        },
-        {
-            id: 3,
-            name: "Project 3",
-            image: "/assets/images/project3.jpg",
-            url: "https://example.com/project3",
-        },
-        {
-            id: 4,
-            name: "Project 4",
-            image: "/assets/images/project4.jpg",
-            url: "https://example.com/project4",
-        },
-        {
-            id: 5,
-            name: "Project 5",
-            image: "/assets/images/project5.jpg",
-            url: "https://example.com/project5",
-        },
+        { id: 1, name: "Fundacion Manantial", image: "/assets/images/project1.jpg", url: "https://funmanantial.org/", i: "bi bi-droplet-half", icon: "icon-box iconbox-blue" },
+        { id: 2, name: "Rivaltec LTDA", image: "/assets/images/project2.jpg", url: "https://www.rivaltec.net/", i: "bi bi-cpu-fill", icon: "icon-box iconbox-orange" },
+        { id: 3, name: "Los Mexikas", image: "/assets/images/project3.jpg", url: "https://www.losmexikas.com/", i: "bi bi-egg-fried", icon: "icon-box iconbox-pink" },
+        { id: 4, name: "David Rios", image: "/assets/images/project4.jpg", url: "https://www.davidriosl.com/", i: "bx bx-file", icon: "icon-box iconbox-orange" },
+        // { id: 5, name: "Project 5", image: "/assets/images/project5.jpg", url: "https://example.com/project5" },
+        // { id: 6, name: "Project 6", image: "/assets/images/project6.jpg", url: "https://example.com/project6" },
+        // { id: 7, name: "Project 7", image: "/assets/images/project7.jpg", url: "https://example.com/project7" },
+        // { id: 8, name: "Project 8", image: "/assets/images/project8.jpg", url: "https://example.com/project8" },
     ];
 
-    // Agregar posiciones aleatorias a los proyectos
-    const columns = [10, 30, 50, 70, 90]; // Columnas predefinidas para alineación
+    const columns = [20, 40, 60, 80]; // Centrar y distribuir los proyectos en la fila
     return projects.map((project, index) => ({
         ...project,
-        positionX: columns[index % columns.length], // Asignar columna en base al índice
-        positionY: Math.random() * 50 + 10, // Altura aleatoria dentro del rango
+        positionX: columns[index % columns.length],
+        positionY: index < 4 ? 10 : 40, // Ajustar las posiciones Y para las filas
     }));
 };
 

@@ -2,9 +2,12 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Evita barras de desplazamiento */
-  background-color: #000; /* Fondo del body */
-  height: 100vh; /* Asegura que el body tenga el alto completo de la ventana */
+  overflow: hidden;
+  /* Evita barras de desplazamiento */
+  background-color: #000;
+  /* Fondo del body */
+  height: 100vh;
+  /* Asegura que el body tenga el alto completo de la ventana */
 }
 
 /* Fondo y contenido del canvas */
@@ -12,17 +15,22 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw; /* Asegura que el canvas ocupe todo el ancho */
-  height: 100vh; /* Asegura que el canvas ocupe toda la altura */
-  z-index: -1; /* Mantiene el canvas por debajo del contenido */
-  pointer-events: none; /* Impide que el canvas interfiera con clics o interacciones */
+  width: 100vw;
+  /* Asegura que el canvas ocupe todo el ancho */
+  height: 100vh;
+  /* Asegura que el canvas ocupe toda la altura */
+  z-index: -1;
+  /* Mantiene el canvas por debajo del contenido */
+  pointer-events: none;
+  /* Impide que el canvas interfiera con clics o interacciones */
   background: transparent;
 }
 
 /* Estilos para el contenido */
 main {
   position: relative;
-  z-index: 1; /* Mantiene el contenido por encima del canvas */
+  z-index: 1;
+  /* Mantiene el contenido por encima del canvas */
   color: white;
   text-align: center;
   padding-top: 20px;

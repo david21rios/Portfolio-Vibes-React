@@ -1,59 +1,121 @@
+/* Contenedor principal */
 .projects-container {
     text-align: center;
     padding: 50px;
 }
 
-.instructions h2 {
-    font-size: 2rem;
+/* Estilo para las instrucciones */
+.title-instructions {
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente retro/futurista */
+    font-size: 1.5rem;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     margin-top: 100px;
 }
 
+.text-instructions {
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente retro/futurista */
+    font-size: 0.6rem;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.start-button {
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente retro/futurista */
+    color: whitesmoke;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 0.8em;
+    font-weight: 500;
+    background-color: #d22626;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.start-button:hover {
+    border-color: rgb(0, 8, 255);
+    color: black;
+}
+
+
+/* Contenedor para los proyectos y la nave */
 .projects-wrapper {
     position: relative;
+    width: 100%;
+    height: 60vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
+/* Estilo para la nave */
 .spaceship {
-    font-size: 3rem;
     position: absolute;
-    top: 0;
-    animation: spaceshipAnimation 3s infinite;
+    bottom: 10%;
+    width: 50px;
+    transition: transform 0.2s;
 }
 
-@keyframes spaceshipAnimation {
-    0% {
-        top: 0;
-    }
-
-    50% {
-        top: 10px;
-    }
-
-    100% {
-        top: 0;
-    }
+.spaceship img {
+    width: 100%;
+    display: block;
+    background-color: transparent;
 }
 
-.shots {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 100px;
+/* Estilo para las balas */
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: orange;
 }
 
-.shot {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Estilo para la animación de la nave cuando se vaya */
+.fly-away {
+    transform: translateY(-100vh);
 }
 
+/* Estilo para los contenedores de los proyectos */
+.project {
+    width: 150px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo para los puntos de color */
+.project .target-point {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+/* Colores de los puntos de los proyectos */
+.project .target-point.color1 {
+    background-color: rgba(255, 106, 0, 0.704);
+}
+
+.project .target-point.color2 {
+    background-color: rgba(255, 255, 0, 0.786);
+}
+
+.project .target-point.color3 {
+    background-color: rgba(0, 128, 0, 0.73);
+}
+
+.project .target-point.color4 {
+    background-color: rgba(3, 180, 245, 0.67);
+}
+
+/* Estilo para las imágenes de los proyectos */
 .project-image {
     width: 100px;
     height: 100px;
@@ -61,8 +123,9 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo para los botones de los proyectos */
 .project-button {
-    background-color: #333;
+    background-color: #a92c2c;
     color: #fff;
     padding: 10px 20px;
     border: none;
