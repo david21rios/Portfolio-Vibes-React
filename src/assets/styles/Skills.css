@@ -1,7 +1,7 @@
 .skills-container {
     width: 100%;
     padding: 2rem 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     /* Semi-transparent background to not cover the galactic background */
 }
 
@@ -23,8 +23,8 @@
 .skills-column {
     flex: 1;
     max-width: 50%;
-    text-align: right;
-    /* Alinear a la derecha */
+    text-align: center;
+    /* Alinear al centro */
 }
 
 .languages-column {
@@ -45,9 +45,9 @@
 
 .skill-name {
     font-weight: 600;
-    color: white;
+    color: rgb(8, 8, 8);
     /* Nombres de las skills y los idiomas en blanco */
-    text-align: left;
+    text-align: center;
     /* Alinear a la izquierda */
     margin-right: 1rem;
     /* Añadir espacio a la derecha */
@@ -58,14 +58,14 @@
     /* Asegura que la barra ocupe el resto del espacio */
     background: transparent;
     /* Fondo transparente */
-    border: 1px solid red;
+    border: 3px solid red;
     /* Borde rojo */
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-    height: 2rem;
+    height: 3rem;
     /* Ajusta el height para que sea más ancho */
-    background-color: #e9ecef30;
+    background-color: #3585d450;
     /* Fondo específico */
 }
 
@@ -82,7 +82,7 @@
 }
 
 .progress-bar {
-    background-color: green;
+    background-color: rgb(52, 238, 0);
     /* Color de los bloques de progreso */
     height: 100%;
     transition: width 0.6s ease;
@@ -96,14 +96,15 @@
     top: 0;
     left: 0;
     background: repeating-linear-gradient(to right,
-            green 0,
-            green 20%,
+            /* green 0, */
+            /* rgba(42, 185, 42, 0.774) 10%, */
             transparent 20%,
             transparent 40%);
 }
 
 .skill-val {
-    color: white;
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
     /* Porcentaje dentro de la barra en blanco */
     position: absolute;
     right: 10px;

@@ -6,7 +6,7 @@
   margin: 0;
   padding: 20px;
   background-color: transparent;
-  height: calc(100vh - 50px); 
+  height: calc(100vh - 50px);
   /* border: 5px solid green;  */
   width: 80%;
   margin-left: 10%;
@@ -34,6 +34,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -71,11 +72,13 @@
 
 /* Lista de elementos de navegación en fila */
 .vertical-nav ul {
-  display: flex; /* Los items estarán en fila */
+  display: flex;
+  /* Los items estarán en fila */
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px; /* Separación entre los elementos */
+  gap: 20px;
+  /* Separación entre los elementos */
 }
 
 /* Elementos individuales de la lista */
@@ -86,7 +89,8 @@
 .nav-item {
   display: block;
   color: white;
-  font-family: 'Press Start 2P', cursive; /* Fuente retro/futurista */
+  font-family: 'Press Start 2P', cursive;
+  /* Fuente retro/futurista */
   font-size: 1.2rem;
   padding: 15px 20px;
   text-decoration: none;
@@ -97,9 +101,12 @@
 }
 
 .nav-item:hover {
-  background-color: #00ff00; /* Color brillante al pasar el mouse */
-  transform: scale(1.1); /* Efecto de aumento */
-  border-color: #00ff00; /* Resaltar el borde al pasar el mouse */
+  background-color: #00ff00;
+  /* Color brillante al pasar el mouse */
+  transform: scale(1.1);
+  /* Efecto de aumento */
+  border-color: #00ff00;
+  /* Resaltar el borde al pasar el mouse */
 }
 
 /* --- Estilos para el contenido principal --- */
@@ -108,7 +115,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 60px; /* Para evitar que el contenido quede debajo de la barra */
+  margin-top: 60px;
+  /* Para evitar que el contenido quede debajo de la barra */
   /* padding: 20px; */
   width: 100%;
   height: calc(100vh - 60px);
@@ -117,18 +125,22 @@
 
 @media (max-width: 768px) {
   .App {
-    max-width: 100%; /* En pantallas pequeñas, usar el 100% del ancho */
+    max-width: 100%;
+    /* En pantallas pequeñas, usar el 100% del ancho */
   }
 }
 
 /* --- REVISAR Y SI NO SE UTILIZA ELIMINAR Contenedor de la sección principal --- */
 .main-container {
-  display: flex; /* Para disposición horizontal */
-  justify-content: space-between; /* Distribuye el espacio entre las dos secciones */
+  display: flex;
+  /* Para disposición horizontal */
+  justify-content: space-between;
+  /* Distribuye el espacio entre las dos secciones */
   align-items: flex-start;
   width: 100%;
-  margin-top: 60px; /* Para evitar que el contenido quede debajo de la barra */
+  margin-top: 60px;
+  /* Para evitar que el contenido quede debajo de la barra */
   padding: 20px;
-  gap: 40px; /* Espacio entre las dos secciones */
+  gap: 40px;
+  /* Espacio entre las dos secciones */
 }
-

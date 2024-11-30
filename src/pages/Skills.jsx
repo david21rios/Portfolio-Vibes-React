@@ -4,20 +4,21 @@ import '../assets/styles/Skills.css'; // Asegúrate de crear e importar este arc
 
 const Skills = () => {
     const skills = [
-        { name: 'HTML', level: '60%' },
+        { name: 'HTML', level: '80%' },
         { name: 'CSS', level: '60%' },
-        { name: 'JavaScript', level: '50%' },
-        { name: 'Java', level: '50%' },
-        { name: 'Python', level: '50%' },
+        { name: 'JavaScript', level: '65%' },
+        { name: 'Java', level: '40%' },
+        { name: 'Python', level: '40%' },
         { name: 'WordPress/CMS', level: '50%' },
+        { name: 'ReactJS', level: '60%' },
         { name: 'Team Work', level: '90%' },
-        { name: 'Constant updating', level: '90%' },
     ];
 
     const languages = [
         { name: 'Spanish', level: '100%' },
-        { name: 'English', level: '70%' },
+        { name: 'English', level: '75%' },
         { name: 'Slovak', level: '50%' },
+        { name: 'Polish', level: '30%' },
     ];
 
     useEffect(() => {

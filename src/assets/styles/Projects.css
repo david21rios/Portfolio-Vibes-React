@@ -1,7 +1,8 @@
 /* Contenedor principal */
 .projects-container {
     text-align: center;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 40px;
 }
 
 /* Estilo para las instrucciones */
